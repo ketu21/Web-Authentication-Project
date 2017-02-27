@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>oPass : A User Verification Protocol</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 835px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+        <table style="width: 100%;">
+            <tr>
+                <td rowspan="2" align="center" height="115" width="170" bgcolor="White">
+                    &nbsp;
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/img1.jpg" 
+                        Height="100px" Width="150px" />
+                </td>
+                <td colspan="2" align="center" bgcolor="White">
+                   <marquee behaviour="alternate"> <h1>oPass : A User Verification Protocol</h1></marquee>
+                </td>
+               <td rowspan="2" align="center" height="115" width="170" bgcolor="White">
+                    &nbsp;
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/index4.jpg" />
+                </td>
+            </tr>
+           
+        </table>
+    </div>
+    <div id="menu" style="background-color: #33CCFF;">
+        <table style="width: 100%;">
+            <tr>
+                <td align="right" class="auto-style1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Size="Large" 
+            Orientation="Horizontal" DynamicHorizontalOffset="2" 
+                        Font-Names="Verdana" ForeColor="#0066CC" StaticSubMenuIndent="10px" 
+                        Width="427px">
+                        <StaticSelectedStyle BackColor="#1C5E55" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#E3EAEB" />
+                        <DynamicSelectedStyle BackColor="#1C5E55" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home" SeparatorImageUrl="~/Images/msep.gif" 
+                    NavigateUrl="~/Home.aspx">
+                </asp:MenuItem>
+               
+                <asp:MenuItem NavigateUrl="~/Menu.aspx" Text="Menu" Value="Menu" 
+                    SeparatorImageUrl="~/Images/msep.gif">
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Aboutus.aspx" Text="About Us" Value="About Us" 
+                    SeparatorImageUrl="~/Images/msep.gif">
+                </asp:MenuItem>
+                 
+                <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="Contact Us" 
+                    Value="Contact Us" SeparatorImageUrl="~/Images/msep.gif"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+                </td>
+                <td align="right">
+                    <%--<asp:TextBox ID="TextBox1" runat="server" BackColor="#33CCFF" BorderStyle="None" Height="20px"></asp:TextBox>--%>
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                    &nbsp;<asp:LinkButton ID="btnLogin" runat="server" onclick="btnLogin_Click" 
+                        Visible="True" Font-Bold="True" Font-Size="Medium" ForeColor="#0066CC">Login</asp:LinkButton>
+                    <asp:LinkButton ID="btnLogout" runat="server" onclick="btnLogout_Click" 
+                        Visible="False" Font-Bold="True" Font-Size="Medium" ForeColor="#0066CC">Logout</asp:LinkButton>
+                </td>
+           </table>
+        
+        
+    </div>
+        <%-- <div style="background-color: #33CCFF;float:right ">
+        <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
+    </div>--%>
+    <div style="clear: both"></div>
+      <div>
+    <hr />
+    </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div>
+    <hr />
+    </div>
+    <div id="footer" align="right"style="background-color: #33CCFF">
+        <h5>Copyright &copy 2013-14.   SSVPS College of Engineering, Group of Students.    </div>
+    </form>
+</body>
+</html>
